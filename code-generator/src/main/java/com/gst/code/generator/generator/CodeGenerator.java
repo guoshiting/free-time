@@ -37,7 +37,7 @@ public class CodeGenerator {
                 Surrogate.Generator.class.getResourceAsStream("/generator/generatorConfig.xml"));
         DefaultShellCallback callback = new DefaultShellCallback(overwrite);
         MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
-        //myBatisGenerator.generate(null);
+        myBatisGenerator.generate(null);
         entitySetSwagger(config);
     }
 
@@ -77,7 +77,7 @@ public class CodeGenerator {
                         sb.append(String.format(swaggerStr,note));
                         sb.append("\r\n");
                     }
-                    if(line.startsWith("improt")){
+                    if(line.trim().startsWith("improt")){
                         sb.append(importStr);
                         sb.append("\r\n");
                     }

@@ -13,18 +13,21 @@
         </plugin>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://49.232.25.123:3506/gst_db"
-                        userId="mysql"
-                        password="Mysql@123">
+                        connectionURL="jdbc:mysql://10.3.5.41:6211/uop_db"
+                        userId="bx_uop"
+                        password="330a492bc19f5a02be9929b57d903134">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.gst.code.generator.entity" targetProject="D:\GitHub\free-time\code-generator\src\main\java"/>
+        <javaModelGenerator targetPackage="com.bridgeintelligent.domp.monitor.rights.entity" targetProject="D:\eclipse-workspace\workspace\source-dev\domp-manager\domp-operation-monitor\domp-operation-monitor-rights\domp-operation-monitor-rights-api\src\main\java"/>
 
-        <sqlMapGenerator targetPackage="mapper"  targetProject="D:\GitHub\free-time\code-generator\src\main\resources"/>
+        <sqlMapGenerator targetPackage="com.bridgeintelligent.domp.monitor.rights.mapper"  targetProject="D:\eclipse-workspace\workspace\source-dev\domp-manager\domp-operation-monitor\domp-operation-monitor-rights\domp-operation-monitor-rights-service\src\main\resources"/>
 
-        <javaClientGenerator targetPackage="com.gst.code.generator.dao" targetProject="D:\GitHub\free-time\code-generator\src\main\java" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="com.bridgeintelligent.domp.monitor.rights.mapper" targetProject="D:\eclipse-workspace\workspace\source-dev\domp-manager\domp-operation-monitor\domp-operation-monitor-rights\domp-operation-monitor-rights-service\src\main\java" type="XMLMAPPER" />
 
-        <table tableName="test_case" >
+        <table tableName="dm_right_index_hour" >
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table tableName="dm_right_index_day" >
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
     </context>
