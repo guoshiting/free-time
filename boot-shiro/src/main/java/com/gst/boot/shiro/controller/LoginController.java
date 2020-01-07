@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/login")
 public class LoginController {
 
     private final static Logger logger = LoggerFactory.getLogger(LoginController.class);
 
 
-    @GetMapping
+    @RequestMapping("/login")
     @ResponseBody
     public Object login(String username,String password){
         logger.info("登录接口开始执行,参数username=>{},password=>{}",username,password);
